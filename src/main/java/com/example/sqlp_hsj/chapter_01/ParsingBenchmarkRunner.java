@@ -1,4 +1,4 @@
-package com.example.sqlp_hsj;
+package com.example.sqlp_hsj.chapter_01;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

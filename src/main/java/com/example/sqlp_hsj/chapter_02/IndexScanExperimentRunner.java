@@ -1,5 +1,6 @@
-package com.example.sqlp_hsj;
+package com.example.sqlp_hsj.chapter_02;
 
+import com.example.sqlp_hsj.ExplainPlanService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
