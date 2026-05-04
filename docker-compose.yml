@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: sqltuning
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "3306:3306"
+      - "3307:3306"
     command:
       - --performance_schema=ON
       - --max_connections=300
