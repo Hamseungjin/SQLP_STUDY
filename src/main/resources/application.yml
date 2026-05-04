@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: sqltuning-practice
+  datasource:
+    url: jdbc:mysql://localhost:3306/sqltuning?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: sqltuning
+    password: sqltuning
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+sqltuning:
+  practice:
+    mode: none # none | load-data | parse-benchmark | index-scan
+  data-loader:
+    target-row-count: 1000000
+    batch-size: 5000
+    skip-if-exists: true
+  parse-benchmark:
+    iterations: 12000
+  index-scan:
+    sample-limit: 3000

@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: sqltuning-mysql
+    environment:
+      MYSQL_DATABASE: sqltuning
+      MYSQL_USER: sqltuning
+      MYSQL_PASSWORD: sqltuning
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    command:
+      - --performance_schema=ON
+      - --max_connections=300
+      - --innodb_buffer_pool_size=512M
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
