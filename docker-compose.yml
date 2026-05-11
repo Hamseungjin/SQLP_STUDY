@@ -1,4 +1,5 @@
 version: '3.9'
+
 services:
   mysql:
     image: mysql:8.4
@@ -17,5 +18,18 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+  oracle:
+    image: gvenzl/oracle-free:23-slim
+    container_name: sqltuning-oracle
+    environment:
+      ORACLE_PASSWORD: oracle
+      APP_USER: sqltuning
+      APP_USER_PASSWORD: sqltuning
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+
 volumes:
   mysql_data:
+  oracle_data:

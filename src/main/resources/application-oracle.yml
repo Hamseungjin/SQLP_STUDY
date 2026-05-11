@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/FREEPDB1
+    username: sqltuning
+    password: sqltuning
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema-oracle.sql
