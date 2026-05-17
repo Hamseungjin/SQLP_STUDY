@@ -25,6 +25,7 @@ Dirty Buffer: 메모리 상에서 수정된 블록
 분산 트랜잭션 에러 복구
 # 데이터 저장 구조
 <img width="988" height="684" alt="Screenshot_20260516_182352_Obsidian" src="https://github.com/user-attachments/assets/3048b93f-4f8a-4ac9-9a7d-a86478e845d5" />
+
 ## 블록(페이지)
 I/O 단위
 ## 익스텐트
